@@ -1,0 +1,15 @@
+<h1>ALL Tricks</h1>
+<%= link_to "新規作成", new_trick_path %>
+<hr>
+<% @tricks.each do |trick| %>
+
+<%= link_to trick.name,trick %>
+<%= image_tag trick.image.url if trick.image? %>
+
+<%= link_to 'edit', edit_trick_path(trick) %>
+<%= link_to 'destroy', trick_path(trick),method: :delete, data: {confirm:"Are you sure?"} %>
+<hr>
+
+<% end %>
+<hr>
+

@@ -1,0 +1,11 @@
+
+
+<%= link_to @trick.name, "#" %>
+<p>
+<% if @trick.image? %>
+　　<%= image_tag @trick.image.thumb.url %>
+　<% else %>
+　　<%= image_tag 'noimage.gif' %>
+　<% end %><br>
+<%= link_to 'back', tricks_path %>
+<%= link_to 'edit', edit_trick_path(@trick) %>

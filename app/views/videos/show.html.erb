@@ -1,0 +1,9 @@
+<h1><%= @trick.name %></h1>
+    <div class="jumbotron">
+      <div class="container">
+        <div class="trickvideo">
+          <%= video_tag(@trick.trick_video, :controls => true, :loop => true, :size => 20*20) %>
+        </div>
+        </div>
+     </div>
+</div>

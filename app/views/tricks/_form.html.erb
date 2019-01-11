@@ -1,0 +1,13 @@
+<%= form_for (@trick )do |f| %>
+  <% if @trick.errors.any? %>
+  <%= @trick.errors.count %>個のエラーがあります
+  <% end %>
+  <%= f.label :name %></br>
+  <%= f.text_field :name %></br>
+  <%= f.label :image %></br>
+　<%= image_tag @trick.image.thumb.url if @trick.image? %>
+　<%= f.file_field :image %>
+　<%= f.hidden_field :image_cache %>
+	<p><%= f.submit :submit %></p>
+<% end %>
+<%= link_to 'back', tricks_path %>
